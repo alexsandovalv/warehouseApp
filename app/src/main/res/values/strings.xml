@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Warehouse</string>
+    <string name="splash_welcome">Bienvenido a la distribuidora</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="menu_add_customer">Agregar Cliente</string>
+    <string name="menu_search_customer">Buscar Cliente</string>
+    <string name="menu_create_invoice">Crear Pedido</string>
+    <string name="menu_search_invoice_by_customer">Buscar Pedido por cliente</string>
+    <string name="menu_logout">Cerrar Sesion</string>
+</resources>

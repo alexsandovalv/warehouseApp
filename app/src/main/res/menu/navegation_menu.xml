@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/addCustomer"
+        android:title="@string/menu_add_customer"/>
+
+    <item
+        android:id="@+id/searchCustomer"
+        android:title="@string/menu_search_customer"
+        />
+
+    <item
+        android:id="@+id/createInvoice"
+        android:title="@string/menu_create_invoice"
+        />
+
+    <item
+        android:id="@+id/searchInvoiceCustomer"
+        android:title="@string/menu_search_invoice_by_customer"
+        />
+
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/menu_logout"
+        />
+
+</menu>
