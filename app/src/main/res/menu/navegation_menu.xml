@@ -10,12 +10,12 @@
         />
 
     <item
-        android:id="@+id/createInvoice"
+        android:id="@+id/getQuote"
         android:title="@string/menu_create_invoice"
         />
 
     <item
-        android:id="@+id/searchInvoiceCustomer"
+        android:id="@+id/searchQuoteCustomer"
         android:title="@string/menu_search_invoice_by_customer"
         />
 
