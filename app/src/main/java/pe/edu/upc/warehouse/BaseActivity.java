@@ -10,6 +10,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ActionBarDrawerToggle toggle;
@@ -66,6 +68,10 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.searchQuoteCustomer:
                 i = new Intent(this, GetQuote.class);
+                break;
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                i = new Intent(this, LoginActivity.class);
                 break;
         }
         //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.inicioMenu);

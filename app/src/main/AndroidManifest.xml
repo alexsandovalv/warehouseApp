@@ -11,21 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".InicioActivity"
             android:theme="@style/AppInitiationTheme" />
-        <activity android:name=".SearchCustomer" />
-        <activity android:name=".CreateCustomer" />
-        <activity android:name=".GetQuote"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SearchCustomer"
+            android:theme="@style/AppInitiationTheme"/>
+        <activity android:name=".CreateCustomer"
+            android:theme="@style/AppInitiationTheme"/>
+        <activity android:name=".GetQuote"
+            android:theme="@style/AppInitiationTheme"/>
     </application>
 
 </manifest>

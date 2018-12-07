@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -22,6 +23,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
 
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
@@ -34,6 +37,9 @@ dependencies {
     //RETROFIT https://github.com/square/retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
+    //GMaps
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+
     //GSON https://github.com/google/gson
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation "com.squareup.retrofit2:converter-gson:2.4.0"
@@ -41,4 +47,11 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     //INTERCEPTOR
     implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
+    //ButterKniff
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-storage:16.0.1'
 }

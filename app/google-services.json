@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1039519493460",
+    "firebase_url": "https://warehouse-5b4ac.firebaseio.com",
+    "project_id": "warehouse-5b4ac",
+    "storage_bucket": "warehouse-5b4ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039519493460:android:47398b5933b92c98",
+        "android_client_info": {
+          "package_name": "pe.edu.upc.warehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039519493460-pejmjpt4cj0ftv4pbt907rtpcr0o6h0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.edu.upc.warehouse",
+            "certificate_hash": "3404a31dbfc4a6638e797f45625fb1d10519654b"
+          }
+        },
+        {
+          "client_id": "1039519493460-h5kie3hm6tmqhvffjc53ft7cdabpiqj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAaT1QFmWqijHpdhcAoJ8Mjjnmk7CYgbk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039519493460-h5kie3hm6tmqhvffjc53ft7cdabpiqj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
