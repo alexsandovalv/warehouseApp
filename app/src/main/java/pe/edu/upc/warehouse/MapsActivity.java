@@ -85,6 +85,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
+        if(mMap!=null){
+            LocationManager service = (LocationManager) getSystemService(LOCATION_SERVICE);
+            Criteria criterio = new Criteria();
+            String provider = service.getBestProvider(criterio, false);
+            Location myLocation = service.getLastKnownLocation(provider);
+
+            if(myLocation !=null){
+                LatLng userLocation = new LatLng(myLocation.getLatitude(),myLocation.getLongitude());
+                CameraPosition myPosition = new CameraPosition.Builder()
+                        .target(userLocation).zoom(17).build();
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(myPosition));
+            }
+        }
 
         locationManager.requestLocationUpdates(locationManager.getBestProvider(criteria, false), 0, 10, new LocationListener() {
             @Override

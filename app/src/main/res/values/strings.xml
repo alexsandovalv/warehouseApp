@@ -21,4 +21,19 @@
         <item>Natural</item>
         <item>Juridica</item>
     </string-array>
+
+    <string name="district_prompt">Distrito</string>
+    <string-array name="district">
+        <item>Ancon</item>
+        <item>Agustino</item>
+        <item>Barranco</item>
+        <item>Chorrillos</item>
+        <item>Miraflores</item>
+        <item>San Isidro</item>
+        <item>Surco</item>
+        <item>Surquillo</item>
+        <item>San Juan de Lurigancho</item>
+        <item>San Juan de Miraflores</item>
+        <item>Zarate</item>
+    </string-array>
 </resources>

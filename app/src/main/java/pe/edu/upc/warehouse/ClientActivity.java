@@ -11,7 +11,7 @@ import pe.edu.upc.warehouse.model.Cliente;
 import pe.edu.upc.warehouse.request.AsyncResponse;
 import pe.edu.upc.warehouse.request.HttpClienteData;
 
-public class ClientActivity extends AppCompatActivity implements AsyncResponse {
+public class ClientActivity extends BaseActivity implements AsyncResponse {
 
     private Integer clientID;
     private Cliente cliente;
@@ -43,7 +43,7 @@ public class ClientActivity extends AppCompatActivity implements AsyncResponse {
         btnPedidos = findViewById(R.id.btnPedidos);
         btnAgregarPedido = findViewById(R.id.btnAgregarPedido);
 
-
+        enabledBack();
         Bundle extras = getIntent().getExtras();
         if(extras != null)
         {

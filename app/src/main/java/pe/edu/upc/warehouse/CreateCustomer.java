@@ -125,11 +125,12 @@ public class CreateCustomer extends BaseActivity {
 
     private void showMessage(String message){
         Toast.makeText(this,
-                "error "+message,Toast.LENGTH_LONG).show();
+                message,Toast.LENGTH_LONG).show();
     }
 
     public void showLoading() {
         newUserProgressbar.setVisibility(View.VISIBLE);
+
     }
 
     public void hideLoading() {

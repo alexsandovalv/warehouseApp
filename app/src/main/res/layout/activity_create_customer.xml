@@ -14,131 +14,141 @@
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
         android:visibility="gone"
-        android:layout_below="@+id/frm_input"/>
+        android:layout_below="@+id/scroll_input"
+        android:layout_above="@+id/fmr_buttons"/>
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scroll_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:orientation="vertical"
-        android:id="@+id/frm_input">
+        android:layout_above="@+id/fmr_buttons"
+        >
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo de Persona"
-            android:textAppearance="@style/label_form"/>
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:id="@+id/frm_input">
 
-        <Spinner
-            android:id="@+id/cboTipo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            style="@style/Widget.AppCompat.Spinner.Underlined"
-            android:entries="@array/document_type"
-            android:prompt="@string/document_type_prompt">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Persona"
+                android:textAppearance="@style/label_form"/>
 
-        </Spinner>
+            <Spinner
+                android:id="@+id/cboTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:entries="@array/document_type"
+                android:prompt="@string/document_type_prompt">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombres"
-            android:textAppearance="@style/label_form"
-            />
+            </Spinner>
 
-        <EditText
-            android:id="@+id/et_nombres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese Nombres"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombres"
+                android:textAppearance="@style/label_form"
+                />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Apellidos"
-            android:textAppearance="@style/label_form"/>
+            <EditText
+                android:id="@+id/et_nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese Nombres"/>
 
-        <EditText
-            android:id="@+id/et_apellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese Apellidos"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos"
+                android:textAppearance="@style/label_form"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DNI"
-            android:textAppearance="@style/label_form"/>
+            <EditText
+                android:id="@+id/et_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese Apellidos"
+                />
 
-        <EditText
-            android:id="@+id/et_dni"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Ingrese DNI"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DNI"
+                android:textAppearance="@style/label_form"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Telefono"
-            android:textAppearance="@style/label_form"/>
+            <EditText
+                android:id="@+id/et_dni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Ingrese DNI"/>
 
-        <EditText
-            android:id="@+id/et_telefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Ingrese Telefono"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefono"
+                android:textAppearance="@style/label_form"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textAppearance="@style/label_form"/>
+            <EditText
+                android:id="@+id/et_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Ingrese Telefono"/>
 
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Ingrese correo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textAppearance="@style/label_form"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Disrtito"
-            android:textAppearance="@style/label_form"/>
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Ingrese correo"/>
 
-        <Spinner
-            android:id="@+id/cboDistrito"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            style="@style/Widget.AppCompat.Spinner.Underlined"
-            android:entries="@array/document_type"
-            android:prompt="@string/document_type_prompt">
-        </Spinner>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disrtito"
+                android:textAppearance="@style/label_form"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Direccion"
-            android:textAppearance="@style/label_form"/>
+            <Spinner
+                android:id="@+id/cboDistrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:entries="@array/district"
+                android:prompt="@string/district_prompt">
+            </Spinner>
 
-        <EditText
-            android:id="@+id/et_direccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Ingrese correo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Direccion"
+                android:textAppearance="@style/label_form"/>
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/et_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Ingrese correo"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/fmr_buttons"

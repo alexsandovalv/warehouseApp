@@ -17,7 +17,7 @@ import pe.edu.upc.warehouse.model.Pedido;
 import pe.edu.upc.warehouse.request.AsyncResponsePedidos;
 import pe.edu.upc.warehouse.request.HttpPedidosData;
 
-public class PedidosActivity extends AppCompatActivity implements AsyncResponsePedidos {
+public class PedidosActivity extends BaseActivity implements AsyncResponsePedidos {
 
     private Integer clientID;
     private RecyclerView reciclador;
@@ -38,7 +38,7 @@ public class PedidosActivity extends AppCompatActivity implements AsyncResponseP
             clientID = extras.getInt("ID");
             RellenarPedidos();
         }
-
+        enabledBack();
         linarSinPedidos = findViewById(R.id.linearSinPedidos);
         btnNuevoPedido = findViewById(R.id.btnNuevoPedido);
 

@@ -10,8 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:padding="20dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/frmCliente">
         <TextView
             android:id="@+id/txtNombre"
             android:drawableLeft="@drawable/shop"
@@ -72,27 +73,31 @@
             android:paddingBottom="5dp"
             android:text="Referencia:"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btnPedidos"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/listaicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VER PEDIDOS"/>
-            <Button
-                android:id="@+id/btnAgregarPedido"
-                android:layout_weight="1"
-                android:drawableLeft="@drawable/agregaricon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AGREGAR PEDIDO"/>
-        </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnPedidos"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/listaicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VER PEDIDOS"
+            android:theme="@style/PrimaryButton"/>
+        <Button
+            android:id="@+id/btnAgregarPedido"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/agregaricon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AGREGAR PEDIDO"
+            android:theme="@style/PrimaryButton"/>
     </LinearLayout>
 
 
