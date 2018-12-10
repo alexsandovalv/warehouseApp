@@ -26,8 +26,13 @@ import retrofit2.Response;
 public class CreateCustomer extends BaseActivity {
 
     public static final String TAG = CreateCustomer.class.getSimpleName();
+    @BindView(R.id.cboDistrito)
+    Spinner cboDistrito;
     @BindView(R.id.cboTipo)
     Spinner cboTipo;
+
+    @BindView(R.id.et_direccion)
+    EditText etDireccion;
     @BindView(R.id.et_nombres)
     EditText etNombres;
     @BindView(R.id.et_apellido)
@@ -87,8 +92,8 @@ public class CreateCustomer extends BaseActivity {
         String telefono = etTelefono.getText().toString();
         String fullName = nombres.concat(" ").concat(apellidos);
 
-        String distrito = "Surco";
-        String direccion = "Av melgarejo 123";
+        String distrito = cboDistrito.getSelectedItem().toString();
+        String direccion = etDireccion.getText().toString();
 
         ClienteBL cliente = new ClienteBL(tipoCliente,fullName, tipo_doc, dni, email, telefono);
         cliente.setDireccion(direccion);

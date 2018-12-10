@@ -108,6 +108,36 @@
             android:inputType="textEmailAddress"
             android:hint="Ingrese correo"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disrtito"
+            android:textAppearance="@style/label_form"/>
+
+        <Spinner
+            android:id="@+id/cboDistrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:entries="@array/document_type"
+            android:prompt="@string/document_type_prompt">
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direccion"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:id="@+id/et_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Ingrese correo"/>
+
     </LinearLayout>
 
     <LinearLayout
