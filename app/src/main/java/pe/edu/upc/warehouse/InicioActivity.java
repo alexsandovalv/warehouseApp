@@ -69,6 +69,9 @@ public class InicioActivity extends AppCompatActivity implements
             case R.id.addCustomer:
                 i = new Intent(this, CreateCustomer.class);
                 break;
+            case R.id.customerMaps:
+                i = new Intent(this, MapsActivity.class);
+                break;
             case R.id.searchCustomer:
                 i = new Intent(this, SearchCustomer.class);
                 break;
@@ -76,7 +79,7 @@ public class InicioActivity extends AppCompatActivity implements
                 i = new Intent(this, GetQuote.class);
                 break;
             case R.id.searchQuoteCustomer:
-                i = new Intent(this, GetQuote.class);
+                i = new Intent(this, SearchCustomer.class);
                 break;
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();

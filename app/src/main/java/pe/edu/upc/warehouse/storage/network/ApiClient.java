@@ -9,7 +9,7 @@ public class ApiClient {
 
     private static final String TAG = "ApiClient";
     //private static final String API_BASE_URL="https://obscure-earth-55790.herokuapp.com";
-    private static final String API_BASE_URL="http://tramitar.net/UPC/Android/";
+    private static final String API_BASE_URL="http://tramitar.net/";
 
     private static ServicesApiInterface servicesApiInterface;
     private static OkHttpClient.Builder httpClient;

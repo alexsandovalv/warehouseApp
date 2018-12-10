@@ -14,10 +14,10 @@ import retrofit2.http.Path;
 
 public interface ServicesApiInterface {
 
-    @POST("/clientes/agregar")
+    @POST("/UPC/Android/clientes/agregar")
     Call<Cliente> addCustomer(@Body ClienteBL raw);
 
-    @GET("/clientes/listar")
+    @GET("/UPC/Android/clientes/listar")
     Call<Customers> allCustomer();
 
 }

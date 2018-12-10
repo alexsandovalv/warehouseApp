@@ -1,6 +1,7 @@
 package pe.edu.upc.warehouse;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -66,6 +67,7 @@ public class CreateCustomer extends BaseActivity {
 
     @OnClick({R.id.btnSave, R.id.btnCancel})
     public void onViewClicked(View view) {
+        showLoading();
         switch (view.getId()) {
             case R.id.btnSave:
                 saveCustomer();
@@ -91,7 +93,8 @@ public class CreateCustomer extends BaseActivity {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
-
+                hideLoading();
+                Log.i(TAG, "respuesta del servidor "+ response.isSuccessful());
                 if(response!=null && response.isSuccessful()){
                     exitActivity();
                 }
@@ -99,7 +102,8 @@ public class CreateCustomer extends BaseActivity {
 
             @Override
             public void onFailure(Call<Cliente> call, Throwable t) {
-
+                Log.i(TAG, "respuesta del servidor con error");
+                hideLoading();
                 showMessage(t.getMessage());
             }
         });
@@ -109,6 +113,14 @@ public class CreateCustomer extends BaseActivity {
     private void showMessage(String message){
         Toast.makeText(this,
                 "error "+message,Toast.LENGTH_LONG).show();
+    }
+
+    public void showLoading() {
+        newUserProgressbar.setVisibility(View.VISIBLE);
+    }
+
+    public void hideLoading() {
+        newUserProgressbar.setVisibility(View.GONE);
     }
 
     private void exitActivity(){
