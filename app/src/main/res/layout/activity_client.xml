@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtNombre"
+            android:drawableLeft="@drawable/shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:text=" Cliente"/>
+        <TextView
+            android:id="@+id/txtTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="Tipo:"/>
+        <TextView
+            android:id="@+id/txtDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="DNI:"/>
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="E-mail:"/>
+
+        <TextView
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="Teléfono:"/>
+        <TextView
+            android:id="@+id/txtDistrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="Distrito:"/>
+        <TextView
+            android:id="@+id/txtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="Dirección:"/>
+        <TextView
+            android:id="@+id/txtReferencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:paddingBottom="5dp"
+            android:text="Referencia:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnPedidos"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/listaicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VER PEDIDOS"/>
+            <Button
+                android:id="@+id/btnAgregarPedido"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/agregaricon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AGREGAR PEDIDO"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -14,6 +14,7 @@
 
 
     <string name="document_type_prompt">Sel un documento</string>
+    <string name="customerMaps">Clientes en Mapa</string>
     <string-array name="document_type">
         <item>Natural</item>
         <item>Juridica</item>

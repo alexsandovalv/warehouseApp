@@ -2,6 +2,8 @@ package pe.edu.upc.warehouse.model;
 
 public class Cliente {
 
+    private int id;
+    private String imagen;
     private String tipo;
     private String nombre;
     private String razon_social;
@@ -33,6 +35,25 @@ public class Cliente {
     public Cliente(String tipo, String nombre, String razon_social, String tipo_dni,
                    Long n_documento, String email, String distrito, String telefono, String direccion,
                    String referencia, String latitud, String longitud) {
+        this.tipo = tipo;
+        this.nombre = nombre;
+        this.razon_social = razon_social;
+        this.tipo_dni = tipo_dni;
+        this.n_documento = n_documento;
+        this.email = email;
+        this.distrito = distrito;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.referencia = referencia;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
+    public Cliente(int id, String imagen, String tipo, String nombre, String razon_social, String tipo_dni,
+                   Long n_documento, String email, String distrito, String telefono, String direccion,
+                   String referencia, String latitud, String longitud) {
+        this.id = id;
+        this.imagen = imagen;
         this.tipo = tipo;
         this.nombre = nombre;
         this.razon_social = razon_social;
@@ -142,4 +163,21 @@ public class Cliente {
     public void setLongitud(String longitud) {
         this.longitud = longitud;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
 }

@@ -5,6 +5,11 @@
         android:title="@string/menu_add_customer"/>
 
     <item
+        android:id="@+id/customerMaps"
+        android:title="@string/customerMaps"
+        />
+
+    <item
         android:id="@+id/searchCustomer"
         android:title="@string/menu_search_customer"
         />
