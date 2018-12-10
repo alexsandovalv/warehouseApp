@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Warehouse</string>
     <string name="splash_welcome">Bienvenido a la distribuidora</string>
 
@@ -12,6 +13,7 @@
 
     <string name="title_create_customer">Agregar Cliente</string>
 
+    <string name="title_activity_maps">Clientes Map</string>
 
     <string name="document_type_prompt">Sel un documento</string>
     <string name="customerMaps">Clientes en Mapa</string>

@@ -1,16 +1,23 @@
 package pe.edu.upc.warehouse.storage.network.entity;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ClienteBL {
 
     private String tipo;
     private String nombre;
     private String razon_social;
+
+    @SerializedName("tipo_documento")
     private String tipo_dni;
     private Long n_documento;
     private String email;
     private String telefono;
     private String latitud;
     private String longitud;
+
+    private String distrito;
+    private String direccion;
 
     public ClienteBL() {
     }
@@ -21,6 +28,18 @@ public class ClienteBL {
         this.n_documento = n_documento;
         this.email = email;
         this.telefono = telefono;
+    }
+
+    public ClienteBL(String tipo, String nombre, String tipo_dni, Long n_documento, String email, String telefono) {
+        this(tipo, nombre, n_documento, email, telefono);
+        this.tipo_dni = tipo_dni;
+    }
+
+    public ClienteBL(String tipo, String nombre, String tipo_dni, Long n_documento, String email, String telefono,
+                     String distrito, String direccion) {
+        this(tipo, nombre, tipo_dni, n_documento, email, telefono);
+        this.distrito = distrito;
+        this.direccion = direccion;
     }
 
     public ClienteBL(String tipo, String nombre,
@@ -104,4 +123,21 @@ public class ClienteBL {
     public void setLongitud(String longitud) {
         this.longitud = longitud;
     }
+
+    public String getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 }
+

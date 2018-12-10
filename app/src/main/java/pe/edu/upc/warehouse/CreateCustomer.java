@@ -1,9 +1,11 @@
 package pe.edu.upc.warehouse;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -59,12 +61,6 @@ public class CreateCustomer extends BaseActivity {
         enabledBack();
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
-    }
-
     @OnClick({R.id.btnSave, R.id.btnCancel})
     public void onViewClicked(View view) {
         showLoading();
@@ -82,11 +78,21 @@ public class CreateCustomer extends BaseActivity {
         String nombres = etNombres.getText().toString();
         String apellidos = etApellido.getText().toString();
         Long dni = Long.parseLong(etDni.getText().toString());
+        String tipo_doc = "dni";
+
+        if(String.valueOf(dni.intValue()).length() > 9)
+            tipo_doc = "ruc";
+
         String email = etEmail.getText().toString();
         String telefono = etTelefono.getText().toString();
         String fullName = nombres.concat(" ").concat(apellidos);
 
-        ClienteBL cliente = new ClienteBL(tipoCliente,fullName, dni, email, telefono);
+        String distrito = "Surco";
+        String direccion = "Av melgarejo 123";
+
+        ClienteBL cliente = new ClienteBL(tipoCliente,fullName, tipo_doc, dni, email, telefono);
+        cliente.setDireccion(direccion);
+        cliente.setDistrito(distrito);
 
         Call<Cliente> call = ApiClient.getMyApiClient().addCustomer(cliente);
 
@@ -96,7 +102,9 @@ public class CreateCustomer extends BaseActivity {
                 hideLoading();
                 Log.i(TAG, "respuesta del servidor "+ response.isSuccessful());
                 if(response!=null && response.isSuccessful()){
-                    exitActivity();
+                    cleanForm();
+                    showMessage("Registro exitoso..");
+                    //exitActivity();
                 }
             }
 
@@ -123,7 +131,21 @@ public class CreateCustomer extends BaseActivity {
         newUserProgressbar.setVisibility(View.GONE);
     }
 
+
     private void exitActivity(){
         this.finish();
+    }
+
+    private void cleanForm(){
+        etTelefono.setText("");
+        etDni.setText("");
+        etApellido.setText("");
+        etNombres.setText("");
+        etEmail.setText("");
+        cboTipo.setSelection(0);
+    }
+
+    private boolean isEmailValid(@NonNull String email) {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

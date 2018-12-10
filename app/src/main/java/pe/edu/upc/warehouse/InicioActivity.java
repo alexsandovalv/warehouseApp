@@ -91,7 +91,7 @@ public class InicioActivity extends AppCompatActivity implements
 
         if(i != null){
             startActivity(i);
-            finish();
+            //finish();
         }
         return true;
     }
