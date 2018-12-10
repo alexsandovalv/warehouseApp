@@ -1,17 +1,21 @@
 package pe.edu.upc.warehouse;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText txtPassword;
     @BindView(R.id.btnLogin)
     Button btnLogin;
+    @BindView(R.id.login_progress)
+    View mProgressView;
+    @BindView(R.id.frm_login)
+    LinearLayout mLoginFormView;
 
 
     private FirebaseAuth mAuth;
@@ -56,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onViewClicked() {
         final String email = txtEmail.getText().toString();
         final String password = txtPassword.getText().toString();
+
         if (!isUserValid(email, password)) {
             Toast.makeText(this, "Debes ingresar un Usuario o password", Toast.LENGTH_SHORT).show();
             return;
@@ -71,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) ||
                 (actionId == EditorInfo.IME_ACTION_DONE)){
+            hideSoftKeyboard();
             if (!isUserValid(email, password)) {
                 Toast.makeText(this, "Debes ingresar un Usuario o password", Toast.LENGTH_SHORT).show();
                 return false;
@@ -112,21 +122,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    /*
-    private void showLoading(){
-        flayLoading.setVisibility(View.VISIBLE);
-    }
-
-    private void hideLoading(){
-        flayLoading.setVisibility(View.GONE);
-    }
-
-
-    private void saveSession(LogInBLResponse logInResponse) {
-        PreferencesHelper.saveBLSession(this,logInResponse.getEmail(),logInResponse.getToken());
-    }
-    */
-
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Deseas salir de la aplicación");
@@ -149,6 +144,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void authLogin(String email, String password){
+        showProgress(true);
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -159,6 +155,7 @@ public class LoginActivity extends AppCompatActivity {
                             updateUI(user);
                         }
                         else {
+                            showProgress(false);
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(LoginActivity.this, task.getException().getMessage(),
                                     Toast.LENGTH_LONG).show();
@@ -166,6 +163,21 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void showProgress(final boolean show) {
+        mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+        mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+    }
+
+    public void hideSoftKeyboard() {
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm =
+                    (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null)
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
 }

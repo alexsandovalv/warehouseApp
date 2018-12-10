@@ -1,20 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateCustomer"
-    android:orientation="vertical">
+    >
 
-    <TextView
+    <ProgressBar
+        android:id="@+id/new_customer_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo de Persona"/>
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:id="@+id/frm_input">
 
-    <EditText
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Persona"
+            android:textAppearance="@style/label_form"/>
+
+        <Spinner
+            android:id="@+id/cboTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:entries="@array/document_type"
+            android:prompt="@string/document_type_prompt">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombres"
+            android:textAppearance="@style/label_form"
+            />
+
+        <EditText
+            android:id="@+id/et_nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Nombres"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:id="@+id/et_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Apellidos"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNI"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:id="@+id/et_dni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Ingrese DNI"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefono"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:id="@+id/et_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Ingrese Telefono"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Ingrese correo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fmr_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Texto de prueba"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        >
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="Guardar"
+            android:theme="@style/PrimaryButton"
+            />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="Cancelar"
+            android:theme="@style/PrimaryButton"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

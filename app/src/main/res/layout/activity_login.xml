@@ -7,6 +7,17 @@
     android:background="@drawable/gradient"
     tools:context=".LoginActivity">
 
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorGreen"
+        android:layout_below="@+id/loginTextView"
+        android:layout_centerHorizontal="true"
+        />
+
 
     <ImageView
         android:id="@+id/loginLogo"
@@ -41,6 +52,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="38dp"
         android:orientation="vertical"
+        android:id="@+id/frm_login"
         >
         
         <EditText

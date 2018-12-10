@@ -36,5 +36,7 @@
     <color name="colorIntro3Start">#00BCD4</color>
     <color name="colorIntro3End">#2196F3</color>
 
+    <color name="colorButton">#1abc9c</color>
+
 
 </resources>

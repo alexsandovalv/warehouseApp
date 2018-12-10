@@ -9,4 +9,13 @@
     <string name="menu_create_invoice">Crear Pedido</string>
     <string name="menu_search_invoice_by_customer">Buscar Pedido por cliente</string>
     <string name="menu_logout">Cerrar Sesion</string>
+
+    <string name="title_create_customer">Agregar Cliente</string>
+
+
+    <string name="document_type_prompt">Sel un documento</string>
+    <string-array name="document_type">
+        <item>Natural</item>
+        <item>Juridica</item>
+    </string-array>
 </resources>
