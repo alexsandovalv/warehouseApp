@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/fmr_buttons"
-        >
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +30,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
             android:orientation="vertical"
+            android:layout_alignParentTop="true"
             android:id="@+id/frm_input">
 
             <TextView
@@ -51,44 +53,91 @@
 
             </Spinner>
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/frm_natural"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombres"
-                android:textAppearance="@style/label_form"
-                />
+                android:orientation="vertical"
+                android:visibility="visible">
 
-            <EditText
-                android:id="@+id/et_nombres"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese Nombres"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombres"
+                    android:textAppearance="@style/label_form"
+                    />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Apellidos"
-                android:textAppearance="@style/label_form"/>
+                <EditText
+                    android:id="@+id/et_nombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese Nombres"/>
 
-            <EditText
-                android:id="@+id/et_apellido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingrese Apellidos"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apellidos"
+                    android:textAppearance="@style/label_form"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DNI"
-                android:textAppearance="@style/label_form"/>
+                <EditText
+                    android:id="@+id/et_apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese Apellidos"
+                    />
 
-            <EditText
-                android:id="@+id/et_dni"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DNI"
+                    android:textAppearance="@style/label_form"/>
+
+                <EditText
+                    android:id="@+id/et_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Ingrese DNI"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frm_juridica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Ingrese DNI"/>
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Razon Social"
+                    android:textAppearance="@style/label_form"
+                    />
+
+                <EditText
+                    android:id="@+id/et_razonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese Razon Social"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RUC"
+                    android:textAppearance="@style/label_form"
+                    />
+
+                <EditText
+                    android:id="@+id/et_ruc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Ingrese RUC"/>
+
+            </LinearLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -144,7 +193,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:hint="Ingrese correo"/>
+                android:hint="Ingrese Direccion"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/label_form"
+                android:textStyle="bold"
+
+                android:text="Seleccione Ubicacion"/>
 
         </LinearLayout>
 

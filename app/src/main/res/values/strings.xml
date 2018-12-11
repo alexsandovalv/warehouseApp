@@ -36,4 +36,7 @@
         <item>San Juan de Miraflores</item>
         <item>Zarate</item>
     </string-array>
+
+    <string name="popMsgTitulo">Descargando</string>
+    <string name="popMsgMensaje">Por favor, espere...</string>
 </resources>

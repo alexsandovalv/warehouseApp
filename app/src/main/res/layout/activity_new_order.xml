@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewOrderActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarNewOrder"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre / Razón Social:"
+            android:layout_margin="5dp"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/txtNewOrderNombre"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNI / RUC:"
+            android:layout_margin="5dp"
+            android:id="@+id/lblNewOrderTipo"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/txtNewOrderNumDocumento" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notas:"
+            android:layout_margin="5dp"
+            android:textAppearance="@style/label_form"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:lines="2"
+            android:id="@+id/txtNewOrderNotas" />
+
+        <Button
+            android:id="@+id/btnNewOrderAgregarProducto"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Agregar Producto"
+            android:theme="@style/PrimaryButton"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalle:"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:id="@+id/lblNewOrderCarrito"
+            android:textAppearance="@style/label_form"/>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:padding="3dp"
+                    android:text="Producto"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:text="Cantidad"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:padding="3dp" />
+                <TextView
+                    android:layout_width="80dp"
+                    android:text="Precio S/."
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:padding="3dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="Coca Cola 3 LT UND" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="10" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="76" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="SNICKER X UN" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="4" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="12.80" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="CHOCMAN PACK6 UND" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="5" />
+
+                <TextView
+                    android:padding="3dp"
+                    android:text="10.5" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <Button
+
+                android:id="@+id/btnNewOrderFacturar"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Facturar"
+                android:theme="@style/PrimaryButton"/>
+
+            <Button
+                android:id="@+id/btnNewOrderCancelar"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Cancelar"
+                android:theme="@style/PrimaryButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

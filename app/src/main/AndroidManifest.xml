@@ -48,6 +48,25 @@
             android:theme="@style/AppInitiationTheme"/>
         <activity android:name=".PedidosActivity"
             android:theme="@style/AppInitiationTheme" />
+
+        <activity
+            android:name=".ListCustomersActivity"
+            android:label="Lista de Clientes"
+            android:theme="@style/AppInitiationTheme" />
+        <activity
+            android:name=".NewOrderActivity"
+            android:label="Nuevo Pedido"
+            android:parentActivityName=".ListCustomersActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListProductsActivity"
+            android:label="Lista de Productos"
+            android:theme="@style/AppInitiationTheme" />
+        <activity
+            android:name=".NewProductActivity"
+            android:label="Agregar Producto"
+            android:parentActivityName=".ListProductsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

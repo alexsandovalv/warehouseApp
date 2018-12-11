@@ -76,7 +76,7 @@ public class InicioActivity extends AppCompatActivity implements
                 i = new Intent(this, SearchCustomer.class);
                 break;
             case R.id.getQuote:
-                i = new Intent(this, GetQuote.class);
+                i = new Intent(this, ListCustomersActivity.class);
                 break;
             case R.id.searchQuoteCustomer:
                 i = new Intent(this, SearchCustomer.class);
